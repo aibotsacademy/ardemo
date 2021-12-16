@@ -14,78 +14,137 @@ x.parentNode.insertBefore(s, x);
 </script>
 <div id="YMK-module"></div> <!--loads up the iframe-->
 <script>
+function testEcho(message){
+window.JSInterface.doEchoTest(message);
+}
 
- var yc_event_id;
-  window.ymkAsyncInit = function () {
 
-     window.YMK.init({
 
-    autoOpen: true,
+var yc_event_id;
+window.ymkAsyncInit = function () {
 
-    // disableLiveMode: true,
 
-    enableFourway: true,
 
-    fourWayMode: 'auto',
+window.YMK.init({
 
-    skinSmoothStrength: 50,
 
-    language: 'en',
 
-    height: 100%
+autoOpen: false,
 
-    width: 100%
 
-    });
 
-    window.YMK.addEventListener('opened', function() {
+// disableLiveMode: true,
 
-        document.body.appendChild(document.createTextNode('opened event triggered'));
 
-        document.body.appendChild(document.createElement('br'));
 
-    });
+enableFourway: true,
 
-    window.YMK.addEventListener('cameraFailed', function() {
 
-document.body.appendChild(document.createTextNode('camera failed triggered'));
 
-document.body.appendChild(document.createElement('br'));
+fourWayMode: 'auto',
+
+
+
+skinSmoothStrength: 50,
+
+
+
+language: 'en',
+
+
+
+height: 100%,
+
+
+
+width: 100%
+
+
 
 });
 
 
 
-    window.YMK.addEventListener('loaded', function() {
-
-        document.body.appendChild(document.createTextNode('loaded event triggered'));
-
-        document.body.appendChild(document.createElement('br'));
-
-    });
+window.YMK.addEventListener('opened', function() {
 
 
 
-    // window.YMK.addEventListener('launcherPageEntered', function() {
+document.body.appendChild(document.createTextNode('opened event triggered'));
 
-    //   console.log('launcher triggered');
 
-    // document.body.appendChild(document.createTextNode('launcher triggered'));
 
-    //     document.body.appendChild(document.createElement('br'));
+document.body.appendChild(document.createElement('br'));
 
-    // });
 
-  }
 
-</script>
+});
 
-<script>
-function testEcho(message){
-console.log(message);
+
+
+window.YMK.addEventListener('cameraFailed', function() {
+
+document.body.appendChild(document.createTextNode('camera failed triggered'));
+
+
+
+document.body.appendChild(document.createElement('br'));
+
+
+
+});
+
+
+
+
+
+window.YMK.addEventListener('loaded', function() {
+
+
+
+document.body.appendChild(document.createTextNode('loaded event triggered'));
+
+
+
+document.body.appendChild(document.createElement('br'));
+
+
+
+});
+
+
+
+
+
+// window.YMK.addEventListener('launcherPageEntered', function() {
+
+
+
+// console.log('launcher triggered');
+
+
+
+// document.body.appendChild(document.createTextNode('launcher triggered'));
+
+
+
+// document.body.appendChild(document.createElement('br'));
+
+
+
+// });
+
+
+
 }
+
+
+
 </script>
+
+
 
 </body>
+
+
 
 </html>
